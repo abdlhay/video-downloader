@@ -37,5 +37,14 @@ dependencies {
     // https://mvnrepository.com/artifact/org.json/json
     implementation("org.json:json:20210307")
 
+}
 
+tasks.jar {
+    manifest.attributes["Main-Class"] = "io.ktor.server.netty.EngineMain"
+    val dependencies = configurations
+        .runtimeClasspath
+        .get()
+        .map(::zipTree) // OR .map { zipTree(it) }
+    from(dependencies)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
