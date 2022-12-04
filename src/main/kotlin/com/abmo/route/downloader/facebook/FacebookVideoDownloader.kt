@@ -23,11 +23,12 @@ fun Application.downloadFacebookVideo() {
                 if (!givenUrl.contains("https")) {
                     call.respond(APIResponse("invalid url", null))
                 } else {
-                    try {
-                        call.respond(getVideoUrls(givenUrl))
-                    } catch (e: JSONException) {
-                        call.respond(APIResponse("can't retrieve this video's data"))
-                    }
+                    call.respond(getVideoUrls(givenUrl))
+//                    try {
+//
+//                    } catch (e: JSONException) {
+//                        call.respond(APIResponse("can't retrieve this video's data"))
+//                    }
 
                 }
 
