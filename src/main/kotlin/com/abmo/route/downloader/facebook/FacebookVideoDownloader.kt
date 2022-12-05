@@ -70,22 +70,24 @@ fun getVideoUrls(url: String): APIResponse {
 
     // getting all resolutions and audio
     val resolutionsList = jsonArray.getJSONObject("extensions")
-        .getJSONArray("all_video_dash_prefetch_representations")
-        .getJSONObject(0).getJSONArray("representations")
+        ?.getJSONArray("all_video_dash_prefetch_representations")
+        ?.getJSONObject(0)?.getJSONArray("representations")
 
 
     val resList = mutableListOf<VideoUrls>()
     var audio: String? = null
-    for (i in 1 until resolutionsList.length()) {
-        val videoUrl = resolutionsList.getJSONObject(i).get("base_url")
-        val resolutions = resolutionsList.getJSONObject(i).get("height")
-        if (resolutions as Int != 0) {
-            resList.add(VideoUrls(videoUrl.toString(), resolutions.toString(), true, "video"))
-        } else {
-            audio = videoUrl.toString()
+    if (resolutionsList != null) {
+        for (i in 1 until resolutionsList.length()) {
+            val videoUrl = resolutionsList.getJSONObject(i).get("base_url")
+            val resolutions = resolutionsList.getJSONObject(i).get("height")
+            if (resolutions as Int != 0) {
+                resList.add(VideoUrls(videoUrl.toString(), resolutions.toString(), true, "video"))
+            } else {
+                audio = videoUrl.toString()
 //            resList.add(VideoUrls(videoUrl.toString(), null, false, "audio"))
-        }
+            }
 
+        }
     }
 
     val videoTitle: Any? = try {
