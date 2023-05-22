@@ -122,10 +122,6 @@ The API response will include the following information:
 
 Contributions are welcome! If you find any issues or want to enhance the functionality of this API, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [Apache-2.0 License](LICENSE).
-
 ## Acknowledgments
 
 - This API is built using the Ktor framework (https://ktor.io).
