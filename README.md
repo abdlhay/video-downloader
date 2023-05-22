@@ -5,7 +5,6 @@ This repository contains an API built with Ktor that allows users to download Fa
 ## Features
 
 - Fetches Facebook video URLs by providing the video URL.
-- Downloads the video file from the retrieved URL.
 - Retrieves metadata about the video, including:
   - View count
   - Title
