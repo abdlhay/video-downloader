@@ -1,13 +1,12 @@
 package com.abmo.utils
 
 
+import com.abmo.Constants.VIDEO_DETAILS_KEY
+import com.abmo.Constants.VIDEO_URLS_KEY
 import org.jsoup.Jsoup
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.URL
-
-const val VIDEO_URLS_KEY = "video_urls"
-const val VIDEO_DETAILS_KEY = "video_details"
 
 class ExtractDataFromUrl {
 
@@ -26,7 +25,7 @@ class ExtractDataFromUrl {
         return stringBuffer.toString()
     }
 
-    fun getHtml(url: String) : Map<String, String> {
+    private fun getHtml(url: String) : Map<String, String> {
         val info = mutableMapOf<String, String>()
         val document = Jsoup.parse(getHtmlPage(url))
         val elements = document.getElementsByTag("script")
