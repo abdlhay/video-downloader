@@ -133,7 +133,7 @@ This project is licensed under the [Apache-2.0 License](LICENSE).
 
 ## Contact
 
-For any questions or suggestions, please feel free to reach out to [dragonboy2061@example.com](mailto:dragonboy2061@example.com).
+For any questions or suggestions, please feel free to reach out to [dragonboy2061@gmail.com](mailto:dragonboy2061@gmail.com).
 
 License
 --------
