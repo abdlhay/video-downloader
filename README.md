@@ -56,7 +56,7 @@ To use the API, you can send HTTP requests to the following endpoints:
 
 ### Example Usage
 
-#### Fetching video URL and metadata by video ID
+#### Fetching video URL and metadata by video URL
 
 ```shell
 GET /download/facebook/video?u=<videoUrl>
