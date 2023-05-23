@@ -1,6 +1,6 @@
 # Facebook Video Downloader API with Ktor
 
-This repository contains an API built with Ktor that allows users to download Facebook videos. The API provides a simple and efficient way to retrieve video URLs and download them locally. Additionally, it provides various metadata about the video, including view count, title, post date, and audio URL.
+This repository contains an API built with Ktor that provides a simple and efficient way to retrieve video URLs. Additionally, it provides various metadata about the video, including view count, title, post date, and audio URL.
 
 ## Features
 
