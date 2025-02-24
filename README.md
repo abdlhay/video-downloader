@@ -127,10 +127,6 @@ Contributions are welcome! If you find any issues or want to enhance the functio
 - This API is built using the Ktor framework (https://ktor.io).
 - Special thanks to the contributors of the open-source libraries used in this project.
 
-## Contact
-
-For any questions or suggestions, please feel free to reach out to [dragonboy2061@gmail.com](mailto:dragonboy2061@gmail.com).
-
 License
 --------
 
